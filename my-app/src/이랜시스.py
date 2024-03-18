@@ -10,7 +10,7 @@ warnings.filterwarnings("ignore", message="A date index has been provided, but i
 warnings.filterwarnings("ignore", message="No supported index is available.")
 
 # 이랜시스 종목의 데이터 불러오기
-이랜시스 = fdr.DataReader(symbol='264850', start='2023-06-01')
+이랜시스 = fdr.DataReader(symbol='123410', start='2023-03-17')
 
 # 이동평균선 5일선 계산하기
 이랜시스['MA5'] = 이랜시스['Close'].rolling(window=5).mean()
@@ -23,7 +23,7 @@ model_fit = model.fit()
 forecast = model_fit.forecast(steps=5).values # 다음 5일치 예측 값을 리스트로 변환
 print(forecast)
 # 마지막날 거래 종가
-last = 이랜시스['Close'].iloc[-1]
+last = 이랜시스['Close'].iloc[-2]
 print("막날 종가 : ", last)
 
 # Candlestick 그래프 생성
