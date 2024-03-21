@@ -1,0 +1,13 @@
+body {
+    box-sizing: border-box;
+}
+
+.Main {
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
